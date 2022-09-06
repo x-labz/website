@@ -1,0 +1,42 @@
+﻿html {
+	background: #000000;
+	font-family: "Trebuchet MS";
+}
+
+body { 
+	margin:0px; 
+	padding:0px; 
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+	cursor: pointer;
+}
+
+.lay {
+	position: absolute;
+	top:0;
+	left:0;
+	box-sizing: border-box;
+	border: 3px solid rgb(0, 25, 41);
+}
+
+#c-bg { 
+	background: #202000;
+	}
+#c-fg { 
+	background: rgba(0, 149, 165, 0.7) ;
+	-webkit-transform: translate3d(0px,0px,1px);
+	}	
+#ovl {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	color: #09e;
+	text-align: center;
+}
+#ovl div {
+	display: none;
+}
+
+.hide { display: none; }
+.clear { clear: both;}
+

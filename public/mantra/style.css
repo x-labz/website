@@ -1,0 +1,17 @@
+body {
+    background-color: lavender;
+}
+
+img {
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+p {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 32px;
+    font-weight: 700;
+}

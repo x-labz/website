@@ -1,0 +1,222 @@
+@font-face
+{
+	font-family: SegoeWP;
+	src: url('SegoeWP.ttf');
+}
+
+body
+{
+	margin:0px;
+	padding:0px;
+	font-family: SegoeWP;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);  
+	//background: #aad;
+}
+
+#main
+{
+	padding:  0px ;
+}
+
+.html5logo
+{
+	position: absolute;
+    right: 0px;
+	height: 48px;
+}
+
+.alertBar
+{
+	background: #f09609;
+	padding: 0px 0px 0px 3px;
+	color: white;
+	position: absolute;
+    top: 0;
+	left: 0px;
+    width: 100%;
+}
+
+#touchStart
+{
+	display: none;
+}
+#touchMove
+{
+	display: none;
+}
+#touchEnd
+{
+	display: none;
+}
+.appTitle
+{
+	font-size: 20px;
+	background: #FFF;
+	height: 31px;
+    color: #111;
+    padding: 30px 0px 0px 10px;
+	font-variant: small-caps;
+}
+
+.alertBar>label
+{
+	font-size: 12px;
+	//padding: 2px;
+	margin: 8px;
+	//border: 1px solid;
+	//border-radius: 2px;
+	display: inline-block;
+}
+
+#statusPanel
+{
+	font-size: 11px;
+	position: absolute;
+	right: 5px;
+	border-width: 1px;
+	border-style: solid;
+	padding: 1px;
+	border-radius: 2px;
+	color: black;
+	background: white;
+	top: 70px;
+	width: 150px;
+	z-index:11;
+	opacity: 0.6;
+	display: none;
+}
+
+.views
+{
+	font-size: 36px;
+	padding-left: 8px;
+}
+
+.views>label
+{
+	margin-right:10px;
+	color:#aaa;
+}
+
+.activeView
+{
+	color: black !important;
+}
+
+.fixedHeader
+{
+	//position: fixed;
+	background: #fff;
+	
+	//z-index:11;
+	//top:0px;
+	//left:0px;
+}
+
+.screenW
+{
+	overflow:hidden;
+	//position: absolute;
+	//margin-top: 85px;
+}
+
+#listWrapper
+{
+	width:4000px;
+	position: relative ;
+	left:0px;
+}
+
+#itemListFav
+{
+	//background: #ddd;
+	//float:left;
+	position:absolute;
+	left:0px;
+}
+
+#itemList
+{
+	//float:left;
+	position:absolute;
+	left:0px;
+}
+
+.itemTemplate
+{
+	display:none;
+}
+
+.itemName
+{
+	font-size: 24px;
+	margin-top:8px;
+	padding: 0px 10px 0px 10px;
+	display: inline-block;
+}
+
+.activeItem
+{
+	background: black !important;
+	color: #eee !important;
+}
+
+.itemDesc
+{
+	font-size: 14px;
+	color: #555;
+	margin-left: 10px;
+}
+
+#toolBar
+{
+	background: #D9D9D9;
+	padding: 5px 0px 0px 0px;
+	text-align: center;
+	height: 42px;
+}
+
+#toolBar>img
+{
+	opacity: 0.3;
+	margin-right:10px;
+	margin-left:10px;
+}
+
+.activeOp
+{
+	opacity: 1.0 !important;
+}
+
+.noItems
+{
+	font-size: 14px;
+	color: #777;
+	margin-left: 10px;
+}
+.pullDownRefresh
+{
+    
+}
+
+.pullDownRefresh>div
+{
+	display: none;
+	font-size: 12px;
+	color: #777;
+	text-align: center;
+	background: #eee;
+	padding: 8px;
+}
+
+#pullDownStart
+{
+	background: #ddd;
+}
+
+#pullDownRun
+{
+	background: #ccc;
+}
+
+

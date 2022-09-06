@@ -1,0 +1,22 @@
+CACHE MANIFEST 
+# v1.17
+index.html 
+js/script-min.js
+js/jquery-1.9.0.min.js
+js/handlebars-1.0.rc.1.min.js
+css/style.css
+css/button-start.png
+css/header-bg.png
+css/html5-badge-32.png
+css/kraken-pic-48.png
+css/logo-left.png
+css/logo-right.png
+css/kraken-logo-16.png
+audio/slide.mp3
+audio/slide.ogg
+
+NETWORK:
+http://www.google-analytics.com
+http://www.google-analytics.com/ga.js
+
+FALLBACK:

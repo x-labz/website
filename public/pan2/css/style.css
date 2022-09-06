@@ -1,0 +1,225 @@
+@font-face
+{
+	font-family: SegoeWP;
+	src: url('SegoeWP.ttf');
+}
+
+body
+{
+	margin:0px;
+	padding:0px;
+	font-family: SegoeWP;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);  
+	color: #fff;
+}
+
+#container
+{
+}
+
+#backgroundImg
+{
+	z-index: -11;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#main
+{
+	padding:  0px ;
+}
+
+.clearBoth
+{
+	clear: both;
+}
+
+.alertBar
+{
+	background: #f09609;
+	padding: 0px 0px 0px 3px;
+	color: white;
+	position: absolute;
+    top: 0;
+	left: 0px;
+    width: 100%;
+}
+
+#touchStart
+{
+	display: none;
+}
+#touchMove
+{
+	display: none;
+}
+#touchEnd
+{
+	display: none;
+}
+.appTitle
+{
+	font-size: 20px;
+	height: 31px;
+    padding: 30px 0px 0px 10px;
+	font-variant: small-caps;
+	color: #fff;
+}
+
+.alertBar>label
+{
+	font-size: 12px;
+	margin: 8px;
+	display: inline-block;
+}
+
+#statusPanel
+{
+	font-size: 11px;
+	position: absolute;
+	right: 5px;
+	border-width: 1px;
+	border-style: solid;
+	padding: 1px;
+	border-radius: 2px;
+	color: black;
+	background: white;
+	top: 110px;
+	width: 150px;
+	z-index:11;
+	opacity: 0.6;
+	display: none;
+}
+
+.views
+{
+	font-size: 36px;
+	color:#eee;
+	float: left;
+}
+
+#viewAll
+{
+	padding-left:8px;
+}
+
+#viewFav
+{
+	padding-left:0px;
+}
+
+
+.activeView
+{
+	color: black !important;
+}
+
+.fixedHeader
+{
+}
+
+.screenW
+{
+	overflow:hidden;
+}
+
+#listWrapper
+{
+	width:4000px;
+	//position: relative ;
+	//left:0px;
+	-webkit-transition-duration: 0ms;
+	-webkit-transition-property: -webkit-transform;
+}
+
+#itemListFav
+{
+	-webkit-transition-duration: 0ms;
+}
+
+#itemList
+{
+	-webkit-transition-duration: 0ms;
+}
+
+.itemTemplate
+{
+	display:none;
+}
+
+.itemName
+{
+	font-size: 24px;
+	margin-top:8px;
+	padding: 0px 10px 0px 10px;
+	display: inline-block;
+}
+
+.activeItem
+{
+    color: #f09609 !important;
+}
+
+.itemDesc
+{
+	font-size: 14px;
+	color: #ddd ;
+	margin-left: 10px;
+}
+
+#toolBar
+{
+	background: #D9D9D9;
+	padding: 5px 0px 0px 0px;
+	text-align: center;
+	height: 42px;
+}
+
+#toolBar>img
+{
+	opacity: 0.3;
+	margin-right:10px;
+	margin-left:10px;
+}
+
+.activeOp
+{
+	opacity: 1.0 !important;
+}
+
+.noItems
+{
+	font-size: 14px;
+	color: #777;
+	margin-left: 10px;
+	margin-top: 8px;
+}
+.pullDownRefresh
+{
+}
+
+.pullDownRefresh>div
+{
+	display: none;
+	font-size: 12px;
+	color: #f09609;
+	text-align: center;
+	padding: 8px;
+}
+
+#pullDownStart
+{
+}
+
+#pullDownRun
+{
+}
+
+.itemListWrapper
+{
+	overflow:hidden;
+	top:50px;
+	float:left;
+}
+

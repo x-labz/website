@@ -1,0 +1,21 @@
+CACHE MANIFEST 
+# v2.01
+# this is how you add a comment to the manifest. 
+index.html 
+js/script.js
+js/jquery-1.7.2.min.js
+css/style.css
+css/cancel32.png            
+css/delete32.png            
+css/favs.addto32.png    
+css/green-bubbles.jpeg       
+css/refresh32.png       
+css/SegoeWP.ttf             
+css/settings32.png  
+NETWORK:
+data.php
+data.txt
+FALLBACK:
+
+
+    

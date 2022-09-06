@@ -1,0 +1,294 @@
+﻿<!doctype html>
+<html manifest="manifest.cache" >
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>kraken</title>
+		<meta name="description" content="kraken">
+		<meta name="author" content="kraken">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="icon" type="image/png" href="css/kraken-logo-16.png">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="loader-wrapper" style="background: black;
+			color: white;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			padding-top: 200px;">​
+			<div id="loading-text" style="text-align: center;
+				font-family: Arial; font-variant: small-caps;
+				font-size: 22px;
+				font-weight: 700;"> 
+				Loading game...
+			</div>
+			<div id="browser-not-supported" style="text-align: center;
+				font-family: Arial;
+				font-size: 14px;
+				display:none;
+				line-height: 20px;">
+			Your browser is not supported! :'(
+				<div>
+				Try to use one of the followings: Android | iPhone | iPad | Chrome | Safari | Firefox
+				</div>
+			</div>
+		</div>
+		<div style="position: absolute; top: -1000px; left: -1000px;">
+			<img src="css/logo-right.png" />
+			<img src="css/logo-left.png" />
+			<img src="css/kraken-pic-48.png" />
+		</div>
+		
+		<div id="container" style="display:none">
+			
+			<div id="main" role="main">
+				<div class="header">
+					
+					<span class="logo-small"></span>
+					<span class="title-small"></span>
+					<span class="button-info" title="Info"></span>
+					<span class="button-restart" title="Restart"></span>
+					<div class="game-info">
+						<label class="moves">Moves: <span>.</span></label>
+						<label class="timer">Time: <span>.</span></label>
+					</div>
+					<div class="clear-both"></div>
+				</div> 
+				
+			
+
+				<div class="card-name-wrapper">
+					<div id="card-name"></div>
+				</div>
+
+				
+				<div class="cards">
+				
+				</div>
+								
+				<div class="clear-both"></div>
+			</div>	
+			<div  class="side-panel hidden-panel hidden-panel-left">
+			</div>
+			<div class="front-wrapper">
+				<div  class="front-panel left-side open-left">
+				</div>
+				<div  class="front-panel right-side open-right">
+				</div>
+			</div>
+			<div class="score-wrapper">
+				<div class="score-table">
+				</div>
+			</div>
+			<div class="start-wrapper">
+				<img class="start-button" src="css/button-start.png" />
+				<div class="simple-browser">
+					...for the best experience use Android 4 | iPhone | iPad | Chrome | Safari | Firefox
+				</div>
+				<div class="feature-offline">
+					Hint: You don't need live Internet connection to play this game! <br/>
+					Simply add this page to the bookmarks!
+				</div>
+				<a class="face-link" href="https://www.facebook.com/KrakenMemoryGame"><span class="face-logo"></span>Visit our FAN page!</a>
+			</div>
+			
+		</div> <!--! end of #container -->
+
+		<script id="temp-score" type="text/x-handlebars-template">
+			{{#if isGameEnd}}
+				<div>Your score is: <b>{{score}}</b></div>
+				<div>Your hightest score is: <b>{{highScore}}</b></div>
+				{{#if newHighScore}}<div><b>New high score!!!</b></div>{{/if}}
+			{{else}}
+				<div>Your hightest score is: <b>{{highScore}}</b></div>
+			{{/if}}
+			<label>Tap to continue...</label> 
+		</script>
+
+		<script id="temp-card" type="text/x-handlebars-template">
+		{{#each this}}	
+			<div idx="{{id}}" class="card-container zod{{zodiac}}" zod="{{zodiac}}">
+				<span class="card back"></span>
+				<span class="card figure front"></span>
+			</div>
+		{{/each}}
+		</script>
+
+		<script id="temp-card-simple" type="text/x-handlebars-template">
+		{{#each this}}	
+			<div idx="{{id}}" class="simple-card zod{{zodiac}}" zod="{{zodiac}}">
+				<span class="card back"></span>
+				<span class="card figure front"></span>
+			</div>
+		{{/each}}
+		</script>
+
+		<script id="temp-featurecheck" type="text/x-handlebars-template">
+			<h3>System info</h3>
+			<div class="row">
+				<label>Version:</label> 
+				<label>{{ver}}</label>
+			</div>
+			<div class="row">
+				<label>Useragent:</label> 
+				<label>{{useragent}}</label>
+			</div>
+			<div class="row">
+				<label>mobile:</label> 
+				<label>
+					{{#if mobile}} 
+						{{#if mobile.length}}
+							{{mobile}}
+						{{else}} 
+							True
+						{{/if}}	
+					{{else}}
+						False
+					{{/if}}
+				</label>
+			</div>
+			<div class="row">
+				<label>Touch:</label> 
+				<label>{{#if touch}}True{{else}}False{{/if}}</label>
+			</div>
+			<div class="row">
+				<label>msPointer:</label> 
+				<label>{{#if msPointer}}True{{else}}False{{/if}}</label>
+			</div>
+			<div class="row">
+				<label>AppCache:</label> 
+				<label>{{#if appCache}}True{{else}}False{{/if}}</label>
+			</div>
+			<div class="row">
+				<label>localStorage:</label> 
+				<label>{{#if localStorage}}True{{else}}False{{/if}}</label>
+			</div>
+			<div class="row">
+				<label>CSS3 animation:</label> 
+				<label>
+					{{#if css3anim}} 
+						{{#if css3anim.length}}
+							{{css3anim}}
+						{{else}} 
+							True
+						{{/if}}	
+					{{else}}
+						False
+					{{/if}}
+				</label>
+			</div>
+			<div class="row">
+				<label>CSS3 transition:</label> 
+				<label>
+					{{#if css3transition}} 
+						{{#if css3transition.length}}
+							{{css3transition}}
+						{{else}} 
+							True
+						{{/if}}	
+					{{else}}
+						False
+					{{/if}}
+				</label>
+			</div>
+			<div class="row">
+				<label>CSS3 transform 2D:</label> 
+				<label>
+					{{#if css3transform}} 
+						{{#if css3transform.length}}
+							{{css3transform}}
+						{{else}} 
+							True
+						{{/if}}	
+					{{else}}
+						False
+					{{/if}}
+				</label>
+			</div>
+			<div class="row">
+				<label>CSS3 transform 3D:</label> 
+				<label>
+					{{#if css3transform3d}} 
+						{{#if css3transform3d.length}}
+							{{css3transform3d}}
+						{{else}} 
+							True
+						{{/if}}	
+					{{else}}
+						False
+					{{/if}}
+				</label>
+			</div>
+			<div class="row">
+				<label>CSS3 transform-style:</label> 
+				<label>
+					{{#if transformStyle}} 
+						{{#if transformStyle.length}}
+							{{transformStyle}}
+						{{else}} 
+							True
+						{{/if}}	
+					{{else}}
+						False
+					{{/if}}
+				</label>
+			</div>
+			<div class="row">
+				<label>CSS3 backface-visibility:</label> 
+				<label>
+					{{#if backfaceVisibility}} 
+						{{#if backfaceVisibility.length}}
+							{{backfaceVisibility}}
+						{{else}} 
+							True
+						{{/if}}	
+					{{else}}
+						False
+					{{/if}}
+				</label>
+			</div>
+			<div class="row">
+				<label>3D:</label> 
+				<label>{{#if mode3d}}True{{else}}False{{/if}}</label>
+			</div>
+			<div class="row">
+				<label>Audio:</label> 
+				<label>{{#if audio}}True{{else}}False{{/if}}</label>
+			</div>
+			<div class="row">
+				<label>Width:</label> 
+				<label>
+					{{width}}
+				</label>
+			</div>
+			<div class="row">
+				<label>Height:</label> 
+				<label>
+					{{height}}
+				</label>
+			</div>
+			<img src="css/html5-badge-32.png"/>
+		</script>
+		<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="js/handlebars-1.0.rc.1.min.js"></script>
+		<script type="text/javascript" src="js/script-min.js"></script>
+		<!--script type="text/javascript" src="js/script.js"></script-->
+
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-38873367-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		
+	</body>
+</html>
+

@@ -1,0 +1,50 @@
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.App-logo {
+  /*animation: App-logo-spin infinite 20s linear;*/
+  height: 50px;
+}
+
+.App-header {
+  height: 95px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.file-list {
+  font-size: 14px;
+}
+
+.row {
+  margin: 10px 0 ;
+}
+
+.max-width {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.ui-widget {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 100;
+}
+
+.ui-card-subtitle, .ui-card-title {
+  font-weight: 100;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
