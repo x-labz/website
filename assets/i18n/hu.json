@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Kezdőlap",
+    "about": "Rólunk",
+    "services": "Szolgáltatások",
+    "contact": "Kapcsolat"
+  },
+  "hero": {
+    "title": "Üdvözlünk a weboldalamon",
+    "subtitle": "Gyönyörű, reszponzív webhelyek építése"
+  },
+  "about": {
+    "title": "Rólunk",
+    "description": "Modern, gyors és hozzáférhető webes tapasztalatokat hozunk létre a legújabb technológiák és ajánlott eljárások segítségével."
+  },
+  "services": {
+    "title": "Szolgáltatások",
+    "item1": "Web Tervezés",
+    "item2": "Reszponzív Fejlesztés",
+    "item3": "Teljesítmény Optimalizálás"
+  },
+  "footer": "© 2026 Saját weboldal. Minden jog fenntartva."
+}
