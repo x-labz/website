@@ -12,15 +12,20 @@ i18next.init({
         "nav.about": "About",
         "nav.services": "Services",
         "nav.contact": "Contact",
-        "hero.title": "Welcome to My Website",
-        "hero.subtitle": "Building beautiful, responsive websites",
-        "about.title": "About Us",
-        "about.description": "We create modern, fast, and accessible web experiences using the latest technologies and best practices.",
+
+        "hero.intro": "As a software architect, I design and implement systems from business requirements analysis through development to go-live.",
+        "about.role": "Software Architect",
+        "about.linkedin": "LinkedIn profile",
+        "about.medium": "Publications",
+        "about.contact": "Contact",
         "services.title": "Services",
-        "services.item1": "Web Design",
-        "services.item2": "Responsive Development",
-        "services.item3": "Performance Optimization",
-        "footer": "© 2026 My Website. All rights reserved."
+        "services.item1": "AI-assisted Workflows",
+        "services.desc1": "I teach and support developers and testers in the effective use of AI tools.",
+        "services.item2": "Software Solutions",
+        "services.desc2": "Requirements analysis, implementation plans, system development, testing process support, go-live deployment.",
+        "services.item3": "Testing Existing Systems",
+        "services.desc3": "Generating regression tests for existing systems. At unit, integration and end-to-end test levels.",
+        "footer": "©2025 x-labz.net"
       }
     },
     hu: {
@@ -29,19 +34,25 @@ i18next.init({
         "nav.about": "Rólunk",
         "nav.services": "Szolgáltatások",
         "nav.contact": "Kapcsolat",
-        "hero.title": "Üdvözlünk a weboldalamon",
-        "hero.subtitle": "Gyönyörű, reszponzív webhelyek építése",
-        "about.title": "Rólunk",
-        "about.description": "Modern, gyors és hozzáférhető webes tapasztalatokat hozunk létre a legújabb technológiák és ajánlott eljárások segítségével.",
+
+        "hero.intro": "<strong>Szoftverarchitektként</strong> rendszereket tervezek és implementálok az üzleti követelmény elemzéstől, a megvalósításon át az élesüzemig. Fejlesztőcsapatokat támogatok az <strong>AI-transzformációban</strong>, AI-alapú fejlesztési és tesztelési munkafolyamatokat alakítok ki és oktatok.",
+
+        "about.role": "Szoftverarchitekt",
+        "about.linkedin": "LinkedIn profil",
+        "about.medium": "Publikációk",
+        "about.contact": "Kapcsolatfelvétel",
         "services.title": "Szolgáltatások",
-        "services.item1": "Web Tervezés",
-        "services.item2": "Reszponzív Fejlesztés",
-        "services.item3": "Teljesítmény Optimalizálás",
-        "footer": "© 2026 Saját weboldal. Minden jog fenntartva."
+        "services.item1": "AI támogatott munkafolyamatok",
+        "services.desc1": "Fejlesztőket és tesztelőket oktatok és támogatok az AI eszközök hatékony használatában.",
+        "services.item2": "Szoftvermegoldások",
+        "services.desc2": "Követelmény elemzés, implementációs tervek, rendszerek megvalósítása, tesztelési folyamatok támogatása, éles üzembe helyezés.",
+        "services.item3": "Meglévő rendszerek tesztelése",
+        "services.desc3": "Regressziós tesztek előállítása meglévő rendszerekhez. Unit, integrációs és end-to-end teszt szintjén.",
+        "footer": "©2025 x-labz.net"
       }
     }
   }
-}, function(err, t) {
+}, function (err, t) {
   updateContent();
 });
 
@@ -116,30 +127,36 @@ function updateContent() {
   const updateElement = (id, key) => {
     const el = document.getElementById(id);
     if (el) {
-      el.textContent = i18next.t(key);
+      el.innerHTML = i18next.t(key);
     }
   };
-  
+
   // Update navigation (if elements exist)
   updateElement('nav-home', 'nav.home');
   updateElement('nav-about', 'nav.about');
   updateElement('nav-services', 'nav.services');
   updateElement('nav-contact', 'nav.contact');
-  
+
   // Update hero section
   updateElement('hero-title', 'hero.title');
+  updateElement('hero-intro', 'hero.intro');
   updateElement('hero-subtitle', 'hero.subtitle');
-  
+
   // Update about section
-  updateElement('about-title', 'about.title');
-  updateElement('about-description', 'about.description');
-  
+  updateElement('about-role', 'about.role');
+  updateElement('about-link-linkedin', 'about.linkedin');
+  updateElement('about-link-medium', 'about.medium');
+  updateElement('about-link-contact', 'about.contact');
+
   // Update services section
   updateElement('services-title', 'services.title');
   updateElement('service-item1', 'services.item1');
+  updateElement('service-desc1', 'services.desc1');
   updateElement('service-item2', 'services.item2');
+  updateElement('service-desc2', 'services.desc2');
   updateElement('service-item3', 'services.item3');
-  
+  updateElement('service-desc3', 'services.desc3');
+
   // Update footer
   updateElement('footer-text', 'footer');
 }
@@ -148,20 +165,9 @@ function updateContent() {
 // Event Listeners
 // ========================
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize theme
+document.addEventListener('DOMContentLoaded', function () {
   initTheme();
-  
-  // Initialize language label
   updateLangLabel(i18next.language);
-  
-  // Theme toggle listener
-  document.getElementById('theme-switch').addEventListener('click', function() {
-    toggleTheme();
-  });
-  
-  // Language toggle listener
-  document.getElementById('lang-switch').addEventListener('click', function() {
-    toggleLanguage();
-  });
+  document.getElementById('theme-switch').addEventListener('click', toggleTheme);
+  document.getElementById('lang-switch').addEventListener('click', toggleLanguage);
 });

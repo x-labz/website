@@ -32,10 +32,16 @@ body.dark-mode {
 /* Base Styling with Vars   */
 /* ======================== */
 
-html, body {
+html,
+body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  font-family: monospace;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-size: 1.9rem;
 }
 
 a {
@@ -47,24 +53,36 @@ a:hover {
   color: var(--button-hover);
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   background-color: var(--input-bg);
   color: var(--text-primary);
   border-color: var(--input-border);
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-button, input[type="submit"], input[type="reset"], input[type="button"] {
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
   background-color: var(--button-primary);
   transition: background-color 0.2s ease;
 }
 
-button:hover, input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
   background-color: var(--button-hover);
 }
 
 /* Milligram overrides for dark mode */
-.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   color: white;
 }
 
@@ -120,7 +138,7 @@ header {
 
 .lang-label {
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: 1.75rem;
   font-weight: 600;
   color: var(--text-primary);
   padding: 0.5rem 0.75rem;
@@ -162,7 +180,7 @@ body.dark-mode img[src$=".svg"] {
 }
 
 .hero p {
-  font-size: 1.5rem;
+
   color: var(--text-secondary);
   margin-bottom: 2rem;
 }
@@ -170,10 +188,6 @@ body.dark-mode img[src$=".svg"] {
 section {
   margin: 3rem 0;
   padding: 2rem;
-  background-color: var(--bg-secondary);
-  border-radius: 4px;
-  border: 1px solid var(--border-color);
-  transition: background-color 0.3s ease;
 }
 
 section h2 {
@@ -184,6 +198,7 @@ section h2 {
 section p {
   color: var(--text-secondary);
   line-height: 1.6;
+  text-align:justify;
 }
 
 /* Services Grid */
@@ -197,10 +212,14 @@ section p {
 .service-item {
   padding: 1.5rem;
   background-color: var(--bg-primary);
-  border: 1px solid var(--border-color);
+  /* border: 1px solid var(--border-color); */
   border-radius: 4px;
   text-align: center;
   transition: all 0.3s ease;
+}
+
+.service-item p {
+  text-align: center;
 }
 
 .service-item:hover {
@@ -213,17 +232,35 @@ section p {
 }
 
 /* ======================== */
+/* About Section            */
+/* ======================== */
+
+.about-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.profile-img {
+  border-radius: 75px;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+/* ======================== */
 /* Footer                   */
 /* ======================== */
 
 footer {
-  background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
   padding: 2rem 0;
   margin-top: 3rem;
   text-align: center;
   color: var(--text-secondary);
-  transition: background-color 0.3s ease;
 }
 
 /* ======================== */
@@ -248,7 +285,10 @@ footer {
     font-size: 2rem;
   }
 
-  .hero p {
-    font-size: 1rem;
+  
+
+  .about-profile {
+    flex-direction: column;
+    text-align: center;
   }
 }

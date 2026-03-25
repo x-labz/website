@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ai-dev</title>
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/normalize.min.css">
   <link rel="stylesheet" href="assets/css/milligram.min.css">
   <link rel="stylesheet" href="assets/css/theme.css">
-  
+
   <!-- i18next Library -->
   <script src="assets/js/i18next.min.js"></script>
 </head>
+
 <body>
   <!-- Header with Controls -->
   <header>
     <div class="header-content">
       <img src="assets/icons/head-circuit.svg" alt="Logo" class="logo-img" />
-      
+
       <div class="controls">
         <!-- Language Switcher (shows the OTHER language) -->
         <span id="lang-switch" class="lang-label">HU</span>
-        
+
         <!-- Theme Switcher (shows the OTHER theme icon) -->
         <img id="theme-switch" class="theme-icon" src="assets/icons/moon.svg" alt="Theme" title="Switch theme" />
       </div>
@@ -33,42 +35,52 @@
   <main class="container">
     <!-- Hero Section -->
     <section class="hero">
-      <h1 id="hero-title">Welcome to My Website</h1>
-      <p id="hero-subtitle">Building beautiful, responsive websites</p>
+      <p id="hero-intro">Szoftverarchitektként rendszereket tervezek és implementálok az üzleti követelmény elemzéstől, a megvalósításon át az élesüzemig. <span id="hero-subtitle">AI támogatott szoftver fejlesztési és tesztelési munkafolyamatokat oktatok.</span></p>
     </section>
 
     <!-- About Section -->
     <section>
-      <h2 id="about-title">About Us</h2>
-      <p id="about-description">We create modern, fast, and accessible web experiences using the latest technologies and best practices.</p>
+      
+      <div class="about-profile">
+        <img src="assets/img/dsz_150px.webp" alt="Damján Szabolcs" class="profile-img" />
+        <div class="about-info">
+          <div><strong>Damján Szabolcs</strong> — <span id="about-role">Szoftverarchitekt</span></div>
+            <a href="https://www.linkedin.com/in/1-800-szabolcs-damjan/" target="_blank" rel="noopener noreferrer"><span id="about-link-linkedin">LinkedIn profil</span></a><br>
+            <a href="https://damjansz.medium.com/" target="_blank" rel="noopener noreferrer"><span id="about-link-medium">Publikációk</span></a><br>
+            <a href="https://formsubmit.co/el/daharo" target="_blank" rel="noopener noreferrer"><span id="about-link-contact">Kapcsolatfelvétel</span></a>
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section>
-      <h2 id="services-title">Services</h2>
+ 
       <div class="services-grid">
         <div class="service-item">
-          <h3 id="service-item1">Web Design</h3>
-          <p>Creating beautiful and intuitive user interfaces.</p>
+          <h3 id="service-item1">AI támogatott munkafolyamatok</h3>
+          <p id="service-desc1">Fejlesztőket és tesztelőket oktatok és támogatok az AI eszközök hatékony használatában.</p>
         </div>
         <div class="service-item">
-          <h3 id="service-item2">Responsive Development</h3>
-          <p>Building websites that work on all devices.</p>
+          <h3 id="service-item2">Szoftvermegoldások</h3>
+          <p id="service-desc2">Követelmény elemzés, implementációs tervek, rendszerek megvalósítása, tesztelési folyamatok támogatása, éles üzembe helyezés.</p>
         </div>
         <div class="service-item">
-          <h3 id="service-item3">Performance Optimization</h3>
-          <p>Ensuring fast load times and smooth interactions.</p>
+          <h3 id="service-item3">Meglévő rendszerek tesztelése</h3>
+          <p id="service-desc3">Regressziós tesztek előállítása meglévő rendszerekhez. Unit, integrációs és end-to-end teszt szintjén.</p>
         </div>
       </div>
     </section>
   </main>
 
+
+
   <!-- Footer -->
   <footer>
-    <p id="footer-text">© 2026 My Website. All rights reserved.</p>
+    <p id="footer-text">©2025 x-labz.net</p>
   </footer>
 
   <!-- Application Script -->
   <script src="assets/js/app.js"></script>
 </body>
+
 </html>
