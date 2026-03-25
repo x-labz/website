@@ -13,7 +13,7 @@ i18next.init({
         "nav.services": "Services",
         "nav.contact": "Contact",
 
-        "hero.intro": "As a software architect, I design and implement systems from business requirements analysis through development to go-live.",
+        "hero.intro": "<strong>As a software architect</strong>, I design and implement systems from business requirements analysis through development to go-live. I support development teams in <strong>AI transformation</strong>, designing and teaching AI-powered development and testing workflows.",
         "about.role": "Software Architect",
         "about.linkedin": "LinkedIn profile",
         "about.medium": "Publications",
@@ -24,7 +24,7 @@ i18next.init({
         "services.item2": "Software Solutions",
         "services.desc2": "Requirements analysis, implementation plans, system development, testing process support, go-live deployment.",
         "services.item3": "Testing Existing Systems",
-        "services.desc3": "Generating regression tests for existing systems. At unit, integration and end-to-end test levels.",
+        "services.desc3": "Generating regression tests for existing systems. At unit, integration and end-to-end levels.",
         "footer": "©2025 x-labz.net"
       }
     },
@@ -47,7 +47,7 @@ i18next.init({
         "services.item2": "Szoftvermegoldások",
         "services.desc2": "Követelmény elemzés, implementációs tervek, rendszerek megvalósítása, tesztelési folyamatok támogatása, éles üzembe helyezés.",
         "services.item3": "Meglévő rendszerek tesztelése",
-        "services.desc3": "Regressziós tesztek előállítása meglévő rendszerekhez. Unit, integrációs és end-to-end teszt szintjén.",
+        "services.desc3": "Regressziós tesztek előállítása meglévő rendszerekhez. Unit, integrációs és end-to-end szinteken.",
         "footer": "©2025 x-labz.net"
       }
     }
