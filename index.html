@@ -1,10 +1,36 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ai-dev</title>
+  <title>Damján Szabolcs — Software Architect &amp; AI Transformation for Dev Teams</title>
+  <meta name="description" content="Software architect helping development teams adopt AI-assisted workflows. Design, implementation and testing of systems from requirements to go-live.">
+  <meta property="og:title" content="Damján Szabolcs — Software Architect &amp; AI Transformation">
+  <meta property="og:description" content="Software architect helping development teams adopt AI-assisted workflows. Design, implementation and testing of systems from requirements to go-live.">
+  <meta property="og:type" content="website">
+
+  <!-- Resolve language before paint to prevent HU↔EN flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('language');
+      var nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
+      var lang = saved || (nav === 'hu' ? 'hu' : 'en');
+      document.documentElement.lang = lang;
+    })();
+  </script>
+  <style>
+    html:not([data-i18n-ready]) #hero-intro,
+    html:not([data-i18n-ready]) #about-role,
+    html:not([data-i18n-ready]) #about-link-linkedin,
+    html:not([data-i18n-ready]) #about-link-medium,
+    html:not([data-i18n-ready]) #about-link-contact,
+    html:not([data-i18n-ready]) [id^="service-item"],
+    html:not([data-i18n-ready]) [id^="service-desc"],
+    html:not([data-i18n-ready]) #footer-text {
+      visibility: hidden;
+    }
+  </style>
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/normalize.min.css">
@@ -35,7 +61,7 @@
   <main class="container">
     <!-- Hero Section -->
     <section class="hero">
-      <p id="hero-intro"><strong>Szoftverarchitektként</strong> rendszereket tervezek és implementálok az üzleti követelmény elemzéstől, a megvalósításon át az élesüzemig. Fejlesztőcsapatokat támogatok az <strong>AI-transzformációban</strong>, AI-alapú fejlesztési és tesztelési munkafolyamatokat alakítok ki és oktatok.</strong> rendszereket tervezek és implementálok az üzleti követelmény elemzéstől, a megvalósításon át az élesüzemig. Fejlesztőcsapatokat támogatok az <strong>AI-transzformációban</strong>, AI-alapú fejlesztési és tesztelési munkafolyamatokat alakítok ki és oktatok.</span></p>
+      <p id="hero-intro"><strong>Szoftverarchitektként</strong> rendszereket tervezek és implementálok az üzleti követelmény elemzéstől, a megvalósításon át az élesüzemig. Fejlesztőcsapatokat támogatok az <strong>AI-transzformációban</strong>, AI-alapú fejlesztési és tesztelési munkafolyamatokat alakítok ki és oktatok.</p>
     </section>
 
     <!-- About Section -->
@@ -47,7 +73,7 @@
           <div><strong>Damján Szabolcs</strong> — <span id="about-role">Szoftverarchitekt</span></div>
             <a href="https://www.linkedin.com/in/1-800-szabolcs-damjan/" target="_blank" rel="noopener noreferrer"><span id="about-link-linkedin">LinkedIn profil</span></a><br>
             <a href="https://damjansz.medium.com/" target="_blank" rel="noopener noreferrer"><span id="about-link-medium">Publikációk</span></a><br>
-            <a href="https://formsubmit.co/el/daharo" target="_blank" rel="noopener noreferrer"><span id="about-link-contact">Kapcsolatfelvétel</span></a>
+            <a id="about-link-contact-anchor" href="#"><span id="about-link-contact">Kapcsolatfelvétel</span></a>
         </div>
       </div>
     </section>

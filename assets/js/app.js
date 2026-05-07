@@ -3,7 +3,7 @@
 // ========================
 
 i18next.init({
-  lng: localStorage.getItem('language') || 'en',
+  lng: document.documentElement.lang || localStorage.getItem('language') || 'en',
   fallbackLng: 'en',
   resources: {
     en: {
@@ -17,8 +17,7 @@ i18next.init({
         "about.role": "Software Architect",
         "about.linkedin": "LinkedIn profile",
         "about.medium": "Publications",
-        "about.contact": "Contact",
-        "services.title": "Services",
+        "about.contact": "info@x-labz.net",
         "services.item1": "AI-assisted Workflows",
         "services.desc1": "I teach and support developers and testers in the effective use of AI tools.",
         "services.item2": "Software Solutions",
@@ -40,8 +39,7 @@ i18next.init({
         "about.role": "Szoftverarchitekt",
         "about.linkedin": "LinkedIn profil",
         "about.medium": "Publikációk",
-        "about.contact": "Kapcsolatfelvétel",
-        "services.title": "Szolgáltatások",
+        "about.contact": "info@x-labz.net",
         "services.item1": "AI támogatott munkafolyamatok",
         "services.desc1": "Fejlesztőket és tesztelőket oktatok és támogatok az AI eszközök hatékony használatában.",
         "services.item2": "Szoftvermegoldások",
@@ -149,7 +147,6 @@ function updateContent() {
   updateElement('about-link-contact', 'about.contact');
 
   // Update services section
-  updateElement('services-title', 'services.title');
   updateElement('service-item1', 'services.item1');
   updateElement('service-desc1', 'services.desc1');
   updateElement('service-item2', 'services.item2');
@@ -159,15 +156,27 @@ function updateContent() {
 
   // Update footer
   updateElement('footer-text', 'footer');
+
+  // Reveal localized content now that text is in place
+  document.documentElement.setAttribute('data-i18n-ready', '');
 }
 
 // ========================
 // Event Listeners
 // ========================
 
+function setContactLink() {
+  const link = document.getElementById('about-link-contact-anchor');
+  if (!link) return;
+  const user = 'info';
+  const domain = 'x-labz' + '.' + 'net';
+  link.href = 'mailto:' + user + '@' + domain;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   initTheme();
   updateLangLabel(i18next.language);
+  setContactLink();
   document.getElementById('theme-switch').addEventListener('click', toggleTheme);
   document.getElementById('lang-switch').addEventListener('click', toggleLanguage);
 });
